@@ -24,7 +24,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/components/Preview.jsx">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/components/Webcam.jsx">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/css/Preview.css">
           <value>
             <Attribute>
               <option name="separator" value=";" />

@@ -1,3 +1,15 @@
 .preview {
+    position: relative;
+}
+
+.preview__close {
+    position: absolute;
+    top: 0;
+    margin: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.preview__toolbarRight {
 
 }
