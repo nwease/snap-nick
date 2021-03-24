@@ -3,6 +3,7 @@ import '../css/ChatView.css';
 import {useSelector} from 'react-redux';
 import {selectSelectedImage} from '../features/appSlice';
 import {useHistory} from 'react-router';
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 
 function ChatView() {
 
@@ -22,6 +23,30 @@ function ChatView() {
     return (
         <div className='chatView'>
             <img onClick={exit} src={selectedImage} alt=''/>
+
+            <div className='chatView__timer'>
+                <CountdownCircleTimer
+                    isPlaying
+                    duration={10}
+                    strokeWidth={6}
+                    size={50}
+                    colors={[
+                        ['#004777', 0.33],
+                        ['#f7b801', 0.33],
+                        ['#a30000', 0.33],
+                    ]}
+                >
+                    {
+                        ({remainingTime}) => {
+                            if (remainingTime === 0) {
+                                exit();
+                            }
+
+                            return remainingTime;
+                        }
+                    }
+                </CountdownCircleTimer>
+            </div>
         </div>
     );
 }

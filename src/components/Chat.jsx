@@ -34,7 +34,7 @@ function Chat({id, profilePic, username, timestamp, imageUrl, read}) {
                 </h4>
 
                 <p>
-                    Tap to view - {' '}
+                    {!read && 'Tap to view -'} {' '}
                     <Timeago date={new Date(timestamp?.toDate()).toUTCString()}/>
                 </p>
             </div>
