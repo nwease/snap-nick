@@ -45,6 +45,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/components/Login.jsx">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/components/Preview.jsx">
           <value>
             <Attribute>
@@ -74,6 +81,13 @@
           </value>
         </entry>
         <entry key="/src/css/Chats.css">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/css/Login.css">
           <value>
             <Attribute>
               <option name="separator" value="," />
