@@ -36,25 +36,35 @@ function App() {
                     !user ? (
                         <Login />
                     ): (
-                        <div className='app__body'>
-                            <Switch>
-                                <Route path='/chats/view'>
-                                    <ChatView />
-                                </Route>
+                        <>
+                            <img
+                                className='app__logo'
+                                src='https://scx2.b-cdn.net/gfx/news/2017/1-snapchat.jpg'
+                                alt='Snapchat'
+                            />
 
-                                <Route path='/chats'>
-                                    <Chats />
-                                </Route>
+                            <div className='app__body'>
+                                <div className='body__Background'>
+                                    <Switch>
+                                        <Route path='/chats/view'>
+                                            <ChatView />
+                                        </Route>
 
-                                <Route path='/preview'>
-                                    <Preview />
-                                </Route>
+                                        <Route path='/chats'>
+                                            <Chats />
+                                        </Route>
 
-                                <Route exact path='/'>
-                                    <WebcamCapture />
-                                </Route>
-                            </Switch>
-                        </div>
+                                        <Route path='/preview'>
+                                            <Preview />
+                                        </Route>
+
+                                        <Route exact path='/'>
+                                            <WebcamCapture />
+                                        </Route>
+                                    </Switch>
+                                </div>
+                            </div>
+                        </>
                     )
                 }
             </Router>

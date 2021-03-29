@@ -40,8 +40,14 @@
     opacity: 1;
 }
 
-.chats__chatIcon {
+.chats__searchIcon {
+    color: #fff;
+    font-size: 13px !important;
+}
 
+.chats__chatIcon {
+    color: #fff;
+    font-size: 18px !important;
 }
 
 .chats__posts {
@@ -59,4 +65,20 @@
 
 .chats__posts::-webkit-scrollbar {
     display: none;
+}
+
+.chats__snapIcon {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 200px;
+    color: gray;
+    font-size: 40px !important;
+    cursor: pointer;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chats__snapIcon:hover {
+    opacity: 0.8;
 }

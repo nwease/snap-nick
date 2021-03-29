@@ -15,12 +15,14 @@ import SendIcon from '@material-ui/icons/Send';
 import { v4 as uuid } from 'uuid';
 import {storage, db} from '../firebase';
 import firebase from 'firebase';
+import {selectUser} from '../features/appSlice';
 
 function Preview() {
 
     const cameraImage = useSelector(selectCameraImage);
     const history = useHistory();
     const dispatch = useDispatch();
+    const user = useSelector(selectUser);
 
     useEffect(() => {
         if(!cameraImage) {
@@ -41,13 +43,16 @@ function Preview() {
         uploadTask.on('state_changed', null, (error) => {
             console.log(error);
         }, () => {
-            storage.ref('posts').child(id).getDownloadURL()
+            storage
+                .ref('posts')
+                .child(id)
+                .getDownloadURL()
                 .then(url => {
                     db.collection('posts').add({
                         imageUrl: url,
                         username: 'Nick',
                         read: false,
-                        // ProfilePic,
+                        profilePic: user.profilePic,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     })
 
